@@ -20,18 +20,22 @@ $(document).ready(function () {
         xhr.onreadystatechange = function() { 
            if (xhr.readyState != 4) return;
            if (xhr.status != 200) {
-               	$this.removeClass('loader active');
-				$this.text('Ошибка');
-				$this.addClass('failed animated pulse');
+	           	setTimeout(function () {
+	               	$this.removeClass('loader active');
+					$this.text('Ошибка');
+					$this.addClass('failed animated pulse');
+				}, 500);
 				setTimeout(function () {
 					$this.text('Запустить Unity');
 					$this.removeClass('failed animated pulse');
 					$this.blur();
 				}, 2900);
            } else {
-               	$this.removeClass('loader active');
-				$this.text('Успешно');
-				$this.addClass('success animated pulse');
+	           	setTimeout(function () {
+	               	$this.removeClass('loader active');
+					$this.text('Успешно');
+					$this.addClass('success animated pulse');
+				}, 500);
 				setTimeout(function () {
 					$this.text('Запустить Unity');
 					$this.removeClass('success animated pulse');
