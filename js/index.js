@@ -6,7 +6,7 @@ $(document).ready(function () {
 	$button.on('click', function () {
 
 		var $this = $(this);
-		if ($this.hasClass('active') || $this.hasClass('success')) {
+		if ($this.hasClass('active') || $this.hasClass('success') || $this.hasClass('failed') ) {
 			return false;
 		}
 		$this.addClass('active');
