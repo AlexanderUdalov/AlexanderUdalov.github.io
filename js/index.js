@@ -15,7 +15,7 @@ $(document).ready(function () {
 		}, 125);
 
 		var xhr = new XMLHttpRequest();
-        var url = 'https://127.0.0.1:9020/api/unityservice/';
+        var url = 'http://localhost:9020/api/unityservice/';
         xhr.open('POST', url, true);
         xhr.onreadystatechange = function() { 
            if (xhr.readyState != 4) return;
